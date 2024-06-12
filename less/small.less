@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#sizeIndicator:before {
+    content: "SMALL";
+}
+
+#main,
+#groupTableContainers {
+    width: calc(~"100% - 10px") !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    border: none !important;
+}
+
+#main {
+    height: auto !important;
+}
+
+#groupMatchesContainers,
+#knockOutPhaseTable {
+    //display: none;
+}
+
+#groupTableContainers {
+    width: calc(~"100% - 40px") !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-around;
+        gap: 10px 0px;
+
+        .groupContainer {
+            float: none;
+            width: auto;
+            display: inline-block;
+
+            #groupTeamColumn {
+                width: 90px;
+            }
+        }
+    }
+}
+
+#thirdPlaceGroup {
+    margin-left: 10px;
+    float: none;
+    width: auto !important;
+    max-width: 320px;
+    margin: 0;
+    gap: 0;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+#groupMatchesContainers {
+    border: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: none;
+
+    div {
+        align-items: center;
+        justify-content: space-around;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+
+        td {
+            p:not(.groupTitle) {
+                display: none;
+            }
+            .matchLine {
+                p {
+                    display: block;
+                    padding: 2px;
+                }
+            }
+        }
+
+        .groupMatchesContainer {
+            display: inline-block;
+            width: auto;
+            width: 100%;
+            display: flex;
+
+            .groupMatchesTable {
+                width: auto !important;
+            }
+        }
+    }
+}
+
+#knockOutPhaseTable {
+    border: none;
+    width: auto !important;
+    max-width: 100%;
+
+    #leftBracket tr td {
+        padding: 6px 0px 0px 2px;
+    }
+
+    #rightBracket tr td {
+        padding: 6px 2px 0px 0px;
+    }
+
+    tr {
+        td {
+            div {
+                padding: 2px 4px;
+                min-width: auto;
+
+                .countryFlag {
+                    margin-right: 1px;
+                }
+
+                span {
+                    max-width: 20px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-size: 0.7em;
+                    padding-top: 3px;
+                    text-overflow: ellipsis;
+
+                    display: none;
+                }
+
+                input {
+                    padding: 0;
+                    width: 14px;
+                }
+            }
+        }
+    }
+
+    #leftBracket .knockoutMatchScoreBox {
+        margin-left: 2px;
+    }
+
+    #rightBracket .knockoutMatchScoreBox {
+        margin-right: 2px;
+    }
+
+    #rightBracket {
+        margin-left: 0px;
+    }
+}
+
+.topBar {
+    width: calc(~"100% - 30px") !important;
+
+    #buttons {
+        button {
+            display: inline-block;
+            margin-left: 5px !important;
+            font-size: 0.8em;
+            margin-top: 5px;
+            padding: 8px 15px;
+        }
+    }
+}
+
+#tournamentCompleteContainer {
+    width: calc(~"100% - 10px") !important;
+    left: 5px;
+    #inner {
+        width: auto;
+    }
+    textarea {
+        width: 90% !important;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+}
